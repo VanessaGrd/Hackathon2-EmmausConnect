@@ -12,6 +12,7 @@
 #root {
   --main-color: rgb(86, 100, 210);
   --main-bg-color: #233D8D;
+  --light-bg-color: rgb(220, 220, 220);
   --second-color: rgb(116, 120, 141);
   --dark-color: rgb(52, 58, 64);
   --pink-color: rgb(232, 62, 140);
