@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
   margin: 0;
@@ -8,10 +8,9 @@
   font-family: var(--main-font-family);
 }
 
-
 #root {
   --main-color: rgb(86, 100, 210);
-  --main-bg-color: #233D8D;
+  --main-bg-color: #233d8d;
   --light-bg-color: rgb(220, 220, 220);
   --second-color: rgb(116, 120, 141);
   --dark-color: rgb(52, 58, 64);
@@ -20,7 +19,7 @@
   --info-color: rgb(74, 163, 255);
   --warning-color: rgb(252, 185, 44);
   --danger-color: rgb(255, 61, 96);
-  --main-font-family: 'Fira Sans', sans-serif;
+  --main-font-family: "Fira Sans", sans-serif;
   --second-font-family: "Adamina", serif;
   --second-bg-color: rgb(245, 245, 245);
 }
