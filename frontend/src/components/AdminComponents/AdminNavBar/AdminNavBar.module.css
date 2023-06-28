@@ -1,7 +1,7 @@
-.navbar_container {
+.admin_navbar_container {
     width: 100vw;
     height: 60px;
-    background-color: var(--main-bg-color);
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
