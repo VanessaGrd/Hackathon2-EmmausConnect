@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -11,12 +14,16 @@ import filterSmartphone from "../AlgoSmartphone";
 import ModalWrapper from "../../../ModalWrapper/ModalWrapper";
 import ResumeModal from "../ResumeModal/ResumeModal";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 export default function TestSmartphone() {
   const [openModal, setOpenModal] = useState(false);
+  const notifySuccess = (text) => toast.success(text);
+  const notifyFail = () => toast.error("Un problème est survenu");
   const [smartphones, setSmartphones] = useState({
     marque: "",
     model: "",
-    OS: "",
+    os: "",
     version: "",
     ram: "",
     stockage: "",
@@ -42,6 +49,19 @@ export default function TestSmartphone() {
   };
   console.info(smartphones);
 
+  const handleValidate = () => {
+    axios
+      .post(`${BACKEND_URL}/submit-phone`, smartphones)
+      .then((res) => {
+        if (res.status === 200) {
+          notifySuccess("Le télephone à été ajouté");
+        } else {
+          notifyFail();
+        }
+      })
+      .catch((err) => console.error(err));
+    setOpenModal(false);
+  };
   return (
     <div className={styles.testsmartphone_container}>
       <TextField
@@ -61,7 +81,7 @@ export default function TestSmartphone() {
       <TextField
         id="outlined-basic"
         label="OS"
-        name="OS"
+        name="os"
         onChange={handleChangeValue}
         variant="outlined"
       />
@@ -146,9 +166,21 @@ export default function TestSmartphone() {
       </Button>
       {openModal && (
         <ModalWrapper closeModal={setOpenModal} isCloseBtn>
-          <ResumeModal resume={smartphones} />
+          <ResumeModal resume={smartphones} actionBtn={handleValidate} />
         </ModalWrapper>
       )}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }

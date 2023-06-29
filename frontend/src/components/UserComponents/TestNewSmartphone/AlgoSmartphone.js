@@ -2,7 +2,7 @@
 const globalFilter = (smartphone) => {
   const filterSmartphones = () => {
     if (
-      smartphone.OS === "android" &&
+      smartphone.os === "android" &&
       parseInt(smartphone.version, 10) >= 8 &&
       parseInt(smartphone.ram, 10) >= 2 &&
       parseInt(smartphone.stockage, 10) >= 16 &&
@@ -14,7 +14,7 @@ const globalFilter = (smartphone) => {
       return true;
     }
     if (
-      smartphone.OS === "IOS" &&
+      smartphone.os === "IOS" &&
       parseInt(smartphone.version, 10) >= 10 &&
       parseInt(smartphone.ram, 10) >= 2 &&
       parseInt(smartphone.stockage, 10) >= 64 &&

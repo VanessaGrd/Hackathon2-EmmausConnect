@@ -2,7 +2,11 @@ import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import styles from "./ResumeModal.module.css";
 
-export default function ResumeModal({ resume }) {
+export default function ResumeModal({ resume, actionBtn }) {
+  const handleConfirm = () => {
+    actionBtn();
+  };
+
   return (
     <div className={styles.resumemodal_container}>
       <h3>Récapitulatif</h3>
@@ -17,7 +21,7 @@ export default function ResumeModal({ resume }) {
         </div>
         <div className={styles.one_lign}>
           <p className={styles.bold_text}>OS : </p>
-          <p className={styles.data_text}>{resume.OS}</p>
+          <p className={styles.data_text}>{resume.os}</p>
         </div>
         <div className={styles.one_lign}>
           <p className={styles.bold_text}>Version : </p>
@@ -51,6 +55,7 @@ export default function ResumeModal({ resume }) {
           type="button"
           variant="contained"
           sx={{ marginTop: 3, marginBottom: 2 }}
+          onClick={handleConfirm}
         >
           Ajouter au stock
         </Button>
@@ -60,10 +65,11 @@ export default function ResumeModal({ resume }) {
 }
 
 ResumeModal.propTypes = {
+  actionBtn: PropTypes.func.isRequired,
   resume: PropTypes.shape({
     marque: PropTypes.string.isRequired,
     model: PropTypes.string.isRequired,
-    OS: PropTypes.string.isRequired,
+    os: PropTypes.string.isRequired,
     version: PropTypes.string.isRequired,
     ram: PropTypes.number.isRequired,
     stockage: PropTypes.number.isRequired,

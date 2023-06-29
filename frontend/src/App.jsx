@@ -7,6 +7,7 @@ import Admin from "./pages/Admin/Admin";
 import TestNewSmartphone from "./components/UserComponents/TestNewSmartphone/TestNewSmartphone";
 import UserHome from "./components/UserComponents/UserHome/UserHome";
 import AdminHome from "./components/AdminComponents/AdminHome/AdminHome";
+import TelephoneList from "./components/AdminComponents/AdminList/TelephoneList";
 import "./App.css";
 // import RequireAuth from "./components/routes/RequireAuth";
 import Home from "./pages/Home/Home";
@@ -21,16 +22,19 @@ function App() {
         <Route path="/" element={<Login />} />
 
         {/* <Route element={<RequireAuth allowedRoles="user" />}> */}
-        <Route path="user/home/" element={<Home />}>
+        <Route path="user/" element={<Home />}>
           <Route index element={<UserHome />} />
           <Route path="smartphone" element={<TestNewSmartphone />} />
           <Route path="faq" element={<Faq />} />
         </Route>
 
+
         {/* </Route><Route element={<RequireAuth allowedRoles="admin" />}> */}
-        <Route path="/admin/home" element={<Admin />}>
+        <Route path="/admin/" element={<Admin />}>
           <Route index element={<AdminHome />} />
+          <Route path="telephone-list" element={<TelephoneList />} />
           <Route path="create-user" element={<CreateUser />} />
+
         </Route>
       </Routes>
       <ToastContainer />
