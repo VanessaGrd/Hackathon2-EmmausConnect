@@ -1,7 +1,7 @@
 .testnewsmartphone_container {
-    width: 80vw;
-    height: fit-content;
-    border: solid rgb(0, 13, 255) 2px;
-    border-radius: 20px;
-    margin-top: 80px;
+  width: 80vw;
+  height: fit-content;
+  border: solid rgb(0, 13, 255) 2px;
+  border-radius: 20px;
+  margin-top: 80px;
 }

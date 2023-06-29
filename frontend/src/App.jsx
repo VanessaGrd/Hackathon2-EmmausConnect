@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
@@ -9,6 +10,7 @@ import AdminHome from "./components/AdminComponents/AdminHome/AdminHome";
 import "./App.css";
 // import RequireAuth from "./components/routes/RequireAuth";
 import Home from "./pages/Home/Home";
+import CreateUser from "./components/AdminComponents/CreateUser";
 
 function App() {
   return (
@@ -23,16 +25,13 @@ function App() {
           <Route path="smartphone" element={<TestNewSmartphone />} />
         </Route>
 
-        {/* <Route element={<RequireAuth allowedRoles="admin" />}> */}
+        {/* </Route><Route element={<RequireAuth allowedRoles="admin" />}> */}
         <Route path="/admin/home" element={<Admin />}>
           <Route index element={<AdminHome />} />
+          <Route path="create-user" element={<CreateUser />} />
         </Route>
-
-        {/* <Route path="/home/" element={<Home />}>
-        <Route path="/admin" element={<Admin />}>
-          <Route index element={<AdminHome />} />
-        </Route> */}
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

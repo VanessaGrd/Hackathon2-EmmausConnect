@@ -52,17 +52,32 @@ export default function ExistingSmartphone() {
     <div className={styles.testsmartphone_container}>
       <Box sx={{ minWidth: 220 }}>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Type</InputLabel>
+          <InputLabel id="demo-simple-select-label">OS</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            name="accessories"
+            name="OS"
             label="État"
             onChange={handleChangeValue}
           >
             <MenuItem value={undefined}>Please Select</MenuItem>
-            <MenuItem value={0}>Apple</MenuItem>
-            <MenuItem value={1}>Android</MenuItem>
+            <MenuItem value="IOS">IOS</MenuItem>
+            <MenuItem value="Android">Android</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+      <Box sx={{ minWidth: 220 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Marque</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            name="marque"
+            label="État"
+            onChange={handleChangeValue}
+          >
+            <MenuItem value={undefined}>Please Select</MenuItem>
+            <MenuItem value="Apple">Apple</MenuItem>
           </Select>
         </FormControl>
       </Box>
@@ -72,32 +87,46 @@ export default function ExistingSmartphone() {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            name="accessories"
+            name="model"
             label="État"
             onChange={handleChangeValue}
           >
             <MenuItem value={undefined}>Please Select</MenuItem>
-            <MenuItem value={0}>Non</MenuItem>
-            <MenuItem value={1}>Oui</MenuItem>
+            <MenuItem value="Iphone 12">Iphone 12</MenuItem>
+            <MenuItem value="Iphone 11">Iphone 11</MenuItem>
           </Select>
         </FormControl>
       </Box>
+      <Box sx={{ minWidth: 220 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Version</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            name="version"
+            label="État"
+            onChange={handleChangeValue}
+          >
+            <MenuItem value={undefined}>Please Select</MenuItem>
+            <MenuItem value={14}>14</MenuItem>
+            <MenuItem value={16}>16</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
       <Box sx={{ minWidth: 220 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Stockage</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            name="accessories"
+            name="stockage"
             label="État"
             onChange={handleChangeValue}
           >
             <MenuItem value={undefined}>Please Select</MenuItem>
-            <MenuItem value={0}>8Go</MenuItem>
-            <MenuItem value={1}>16Go</MenuItem>
-            <MenuItem value={2}>32Go</MenuItem>
-            <MenuItem value={3}>64Go</MenuItem>
-            <MenuItem value={4}>128Go</MenuItem>
+            <MenuItem value={64}>64Go</MenuItem>
+            <MenuItem value={128}>128Go</MenuItem>
           </Select>
         </FormControl>
       </Box>
@@ -107,19 +136,56 @@ export default function ExistingSmartphone() {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            name="accessories"
+            name="ram"
             label="État"
             onChange={handleChangeValue}
           >
             <MenuItem value={undefined}>Please Select</MenuItem>
-            <MenuItem value={0}>Non</MenuItem>
-            <MenuItem value={1}>Oui</MenuItem>
+            <MenuItem value={4}>4</MenuItem>
+            <MenuItem value={12}>12</MenuItem>
           </Select>
         </FormControl>
       </Box>
       <Box sx={{ minWidth: 220 }}>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Modèle</InputLabel>
+          <InputLabel id="demo-simple-select-label">Date</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            name="date"
+            label="État"
+            onChange={handleChangeValue}
+          >
+            <MenuItem value={undefined}>Please Select</MenuItem>
+            <MenuItem value="2020">2020</MenuItem>
+            <MenuItem value="2021">2021</MenuItem>
+            <MenuItem value="2022">2022</MenuItem>
+            <MenuItem value="2023">2023</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
+      <Box sx={{ minWidth: 220 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Réseau</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            name="reseau"
+            label="État"
+            onChange={handleChangeValue}
+          >
+            <MenuItem value={undefined}>Please Select</MenuItem>
+            <MenuItem value="4G">4G</MenuItem>
+            <MenuItem value="5G">5G</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+      <Box sx={{ minWidth: 220 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">
+            Câble / Chargeur
+          </InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
