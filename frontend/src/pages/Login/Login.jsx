@@ -19,15 +19,16 @@ export default function Login() {
       if (res) {
         login(res.data);
         if (res.data.roles === "admin") {
-          navigate("/admin");
+          navigate("/admin/home");
         } else {
-          navigate("/home");
+          navigate("/user/home");
         }
       } else {
         throw new Error();
       }
     } catch {
       if (error.response?.status === 401) {
+        console.log(error);
         setError("Les informations d'identification sont incorrectes.");
       } else {
         setError("Une erreur s'est produite. Veuillez réessayer plus tard.");
@@ -46,13 +47,13 @@ export default function Login() {
       <div className={styles.login_box}>
         <form action="login" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Nom</label>
             <input
               type="lastname"
               name="lastname"
               id="lastname"
               required="required"
-              placeholder="lastname"
+              placeholder="votre nom"
               onChange={handleChange}
             />
           </div>
