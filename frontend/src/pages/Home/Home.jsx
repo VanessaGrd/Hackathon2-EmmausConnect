@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import styles from "./Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.home_page}>
-      <Outlet />
+      {/* <Outlet /> */}
+      Home page
     </div>
   );
 }

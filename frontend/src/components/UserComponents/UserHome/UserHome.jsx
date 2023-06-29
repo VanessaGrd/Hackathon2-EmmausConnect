@@ -5,12 +5,17 @@ import styles from "./UserHome.module.css";
 export default function UserHome() {
   return (
     <div className={styles.userhome_container}>
-      <h1>AdminHome</h1>
+      <h1>UserHome</h1>
       <Link to="smartphone">
         <Button type="button" variant="contained">
           User
         </Button>
       </Link>
+      <nav>
+        <ul>
+          <Link to="/user/home">Home</Link>
+        </ul>
+      </nav>
     </div>
   );
 }
