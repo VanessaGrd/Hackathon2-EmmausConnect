@@ -28,7 +28,6 @@ export default function Login() {
       }
     } catch {
       if (error.response?.status === 401) {
-        console.log(error);
         setError("Les informations d'identification sont incorrectes.");
       } else {
         setError("Une erreur s'est produite. Veuillez réessayer plus tard.");
