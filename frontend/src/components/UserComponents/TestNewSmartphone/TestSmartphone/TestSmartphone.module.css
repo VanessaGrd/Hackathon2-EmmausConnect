@@ -1,8 +1,7 @@
 .testsmartphone_container {
-  min-width: 90vw;
-  min-height: 70vh;
   height: fit-content;
-  margin-top: 60px;
+  margin-top: 20px;
+  padding: 20px 0;
   border: solid rgb(41, 41, 41) 4px;
   border-radius: 20px;
   display: flex;
@@ -12,5 +11,5 @@
 }
 
 .testsmartphone_container * {
-  margin: 10px 0;
+  margin: 3px 0;
 }

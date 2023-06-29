@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import styles from "./TestSmartphone.module.css";
-import filterSmartphone from "./AlgoSmartphone";
+import filterSmartphone from "../AlgoSmartphone";
 
 export default function TestSmartphone() {
   const [smartphones, setSmartphones] = useState({
@@ -144,7 +144,11 @@ export default function TestSmartphone() {
           </Select>
         </FormControl>
       </Box>
-      <Button variant="contained" onClick={handleValid}>
+      <Button
+        sx={{ marginBottom: 10 }}
+        variant="contained"
+        onClick={handleValid}
+      >
         Envoyer
       </Button>
     </div>
