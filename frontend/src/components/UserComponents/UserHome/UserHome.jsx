@@ -5,11 +5,19 @@ import styles from "./UserHome.module.css";
 export default function UserHome() {
   return (
     <div className={styles.userhome_container}>
-      <h1>WELCOME ON USER PAGE</h1>
       <Link to="smartphone">
-        <Button type="button" variant="contained">
-          Test a new smartphone
-        </Button>
+        <div className={styles.home_box}>
+          <div className={styles.overlay}>
+            <Button variant="contained">Évaluer un téléphone</Button>
+          </div>
+        </div>
+      </Link>
+      <Link to="smartphone">
+        <div className={styles.home_box2}>
+          <div className={styles.overlay}>
+            <Button variant="contained">Voir la FAQ</Button>
+          </div>
+        </div>
       </Link>
     </div>
   );
