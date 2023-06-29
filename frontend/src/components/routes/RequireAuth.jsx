@@ -3,7 +3,7 @@ import { useLocation, Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useUserContext } from "../../contexts/userContext";
 import Admin from "../AdminComponents/AdminNavBar/AdminNavBar";
-import Home from "../UserComponents/UserHome/UserHome";
+import Home from "../../pages/Home/Home";
 
 export default function RequireAuth({ allowedRoles }) {
   const { user } = useUserContext();

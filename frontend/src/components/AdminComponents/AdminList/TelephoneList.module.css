@@ -1,0 +1,21 @@
+.telephone_list_container {
+border-radius: 20px;
+width: 80vw;
+height: 80vh;
+
+overflow: scroll;
+overflow-x: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-top: 300px;
+margin-top: 60px;
+}
+
+
+@media screen and (max-width: 500px){
+    .telephone_list_container {
+        padding-top: 100px;
+    }
+}
