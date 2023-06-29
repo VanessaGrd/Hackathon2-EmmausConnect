@@ -39,32 +39,125 @@ CREATE TABLE smartphone (
    status_device VARCHAR(50) NOT NULL,
    start_up INT NOT NULL,
    network VARCHAR(10),
-    accessorie TINYINT(1),
+   accessorie TINYINT(1),
    category VARCHAR(50) NOT NULL,
-   price VARCHAR(30) NOT NULL,
-   user_id INT(11) NOT NULL,
-   CONSTRAINT fk_user_smartphone
-   FOREIGN KEY (user_id)
-   REFERENCES user(id)
+   price VARCHAR(30) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO
-smartphone (operating_system, brand, model, version_os, ram, storage_memory, status_device, start_up, network, accessorie, category, price, user_id)
+smartphone (operating_system, brand, model, version_os, ram, storage_memory, status_device, start_up, network, accessorie, category, price)
 VALUES
 (
-  'Android',
+  'android',
   'Samsung',
   'Galaxy A5',
   '8',
   '3 Go',
   '32 Go',
   'bloqué',
-  '2007',
+  '2019',
   '4G',
   '1',
   '2 - C',
-  '96',
-  '3'
+  '96'
+),
+(
+  'IOS',
+  'Apple',
+  'Iphone 8',
+  '12',
+  '4 Go',
+  '64 Go',
+  'bloqué',
+  '2021',
+  '4G',
+  '1',
+  '2 - C',
+  '136'
+),
+(
+  'android',
+  'Samsung',
+  'Galaxy A5',
+  '8',
+  '3 Go',
+  '32 Go',
+  'bloqué',
+  '2019',
+  '4G',
+  '1',
+  '2 - C',
+  '96'
+),
+(
+  'IOS',
+  'Apple',
+  'Iphone 8',
+  '12',
+  '4 Go',
+  '64 Go',
+  'bloqué',
+  '2021',
+  '4G',
+  '1',
+  '2 - C',
+  '136'
+),
+(
+  'android',
+  'Samsung',
+  'Galaxy A5',
+  '8',
+  '3 Go',
+  '32 Go',
+  'bloqué',
+  '2019',
+  '4G',
+  '1',
+  '2 - C',
+  '96'
+),
+(
+  'IOS',
+  'Apple',
+  'Iphone 8',
+  '12',
+  '4 Go',
+  '64 Go',
+  'bloqué',
+  '2021',
+  '4G',
+  '1',
+  '2 - C',
+  '136'
+),
+(
+  'android',
+  'Samsung',
+  'Galaxy A5',
+  '8',
+  '3 Go',
+  '32 Go',
+  'bloqué',
+  '2019',
+  '4G',
+  '1',
+  '2 - C',
+  '96'
+),
+(
+  'IOS',
+  'Apple',
+  'Iphone 8',
+  '12',
+  '4 Go',
+  '64 Go',
+  'bloqué',
+  '2021',
+  '4G',
+  '1',
+  '2 - C',
+  '136'
 );
 
 

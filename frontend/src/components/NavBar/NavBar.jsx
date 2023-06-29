@@ -7,7 +7,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import Divider from "@mui/material/Divider";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ChatBubbleOutlinedIcon from "@mui/icons-material/ChatBubbleOutlined";
 import QuestionMarkOutlinedIcon from "@mui/icons-material/QuestionMarkOutlined";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -36,7 +35,7 @@ export default function NavBar() {
   };
   return (
     <div className={styles.navbar_container}>
-      <NavLink className={styles.menu_link_style} to="/user/home">
+      <NavLink className={styles.menu_link_style} to="/user/">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <HomeOutlinedIcon sx={{ color: "white", mx: 2 }} />
@@ -59,21 +58,12 @@ export default function NavBar() {
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/user/home">
+      <NavLink className={styles.menu_link_style} to="/user/">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <QuestionMarkOutlinedIcon sx={{ color: "white", mx: 2 }} />
           </ListItemIcon>
           <h5 className={styles.nav_title}>FAQ</h5>
-        </CustomListItemButton>
-      </NavLink>
-      <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/user/home">
-        <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
-          <ListItemIcon>
-            <ChatBubbleOutlinedIcon sx={{ color: "white", mx: 2 }} />
-          </ListItemIcon>
-          <h5 className={styles.nav_title}>Messagerie</h5>
         </CustomListItemButton>
       </NavLink>
       <div className={styles.user_logo}>

@@ -13,12 +13,12 @@ const browse = (req, res) => {
 };
 
 const add = (req, res) => {
-  const newsmartphone = req.body;
+  const smartphone = req.body;
 
   models.smartphone
-    .insert(newsmartphone)
+    .insert(smartphone)
     .then(([result]) => {
-      res.location(`/smartphones/${result.insertId}`).sendStatus(201);
+      res.location(`/smartphones/${result.insertId}`).sendStatus(200);
     })
     .catch((err) => {
       console.error(err);
@@ -26,7 +26,20 @@ const add = (req, res) => {
     });
 };
 
+const getAllTelephones = (req, res) => {
+  models.smartphone
+    .findAllSmartphones()
+    .then(([result]) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500);
+    });
+};
+
 module.exports = {
   browse,
   add,
+  getAllTelephones,
 };

@@ -11,17 +11,17 @@ class SmartphoneManager extends AbstractManager {
              VALUES
              (?,?,?,?,?,?,?,?,?,?,?,?)`,
       [
-        smartphone.operating_system,
-        smartphone.brand,
+        smartphone.os,
+        smartphone.marque,
         smartphone.model,
-        smartphone.version_os,
+        smartphone.version,
         smartphone.ram,
-        smartphone.storage_memory,
-        smartphone.status_device,
-        smartphone.start_up,
-        smartphone.network,
-        smartphone.accessorie,
-        smartphone.category,
+        smartphone.stockage,
+        smartphone.state,
+        smartphone.date,
+        smartphone.reseau,
+        smartphone.accessories,
+        smartphone.categorie,
         smartphone.price,
       ]
     );

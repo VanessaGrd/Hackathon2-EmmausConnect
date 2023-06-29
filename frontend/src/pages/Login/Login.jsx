@@ -19,9 +19,9 @@ export default function Login() {
       if (res) {
         login(res.data);
         if (res.data.roles === "admin") {
-          navigate("/admin/home");
+          navigate("/admin/");
         } else {
-          navigate("/user/home");
+          navigate("/user/");
         }
       } else {
         throw new Error();

@@ -6,9 +6,8 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import Divider from "@mui/material/Divider";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ChatBubbleOutlinedIcon from "@mui/icons-material/ChatBubbleOutlined";
-import QuestionMarkOutlinedIcon from "@mui/icons-material/QuestionMarkOutlined";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import SmartphoneOutlinedIcon from "@mui/icons-material/SmartphoneOutlined";
@@ -36,7 +35,7 @@ export default function AdminNavBar() {
   };
   return (
     <div className={styles.admin_navbar_container}>
-      <NavLink className={styles.menu_link_style} to="/admin/home">
+      <NavLink className={styles.menu_link_style} to="/admin/">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <HomeOutlinedIcon sx={{ color: "white", mx: 2 }} />
@@ -45,7 +44,7 @@ export default function AdminNavBar() {
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/admin/home">
+      <NavLink className={styles.menu_link_style} to="telephone-list">
         <CustomListItemButton
           sx={{
             borderRadius: 3,
@@ -62,18 +61,9 @@ export default function AdminNavBar() {
       <NavLink className={styles.menu_link_style} to="create-user">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
-            <QuestionMarkOutlinedIcon sx={{ color: "white", mx: 2 }} />
+            <AddOutlinedIcon sx={{ color: "white", mx: 2 }} />
           </ListItemIcon>
-          <h5 className={styles.nav_title}>Enregistrement</h5>
-        </CustomListItemButton>
-      </NavLink>
-      <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/admin/home">
-        <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
-          <ListItemIcon>
-            <ChatBubbleOutlinedIcon sx={{ color: "white", mx: 2 }} />
-          </ListItemIcon>
-          <h5 className={styles.nav_title}>Messagerie</h5>
+          <h5 className={styles.nav_title}>Ajouter</h5>
         </CustomListItemButton>
       </NavLink>
       <div className={styles.user_logo}>
