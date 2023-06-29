@@ -9,7 +9,6 @@ export default function Admin() {
       <div className={styles.admin_page}>
         <Outlet />
       </div>
-      </div>
-  
+    </div>
   );
 }

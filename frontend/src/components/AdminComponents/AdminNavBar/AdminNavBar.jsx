@@ -59,12 +59,12 @@ export default function AdminNavBar() {
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/admin/home">
+      <NavLink className={styles.menu_link_style} to="create-user">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <QuestionMarkOutlinedIcon sx={{ color: "white", mx: 2 }} />
           </ListItemIcon>
-          <h5 className={styles.nav_title}>FAQ</h5>
+          <h5 className={styles.nav_title}>Enregistrement</h5>
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />

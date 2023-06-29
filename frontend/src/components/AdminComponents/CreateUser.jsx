@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Box, TextField } from "@mui/material";
 import { toast } from "react-toastify";
 import APIService from "../../services/APIService";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,40 +28,77 @@ export default function InscriptionForm() {
         });
     },
   });
+  const boxStyle = {
+    width: "70vw",
+    height: "60vh",
+  };
+  const buttonStyle = {
+    backgroundColor: "rgb(158, 68, 68)",
+  };
+  const typographyStyle = {
+    letterSpacing: "2px",
+    textAlign: "center",
+  };
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">Nom</label>
-      <input
-        name="lastname"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.lastname}
-      />
-
-      <label htmlFor="firstName">Prénom</label>
-
-      <input
-        name="firstname"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.firstname}
-      />
-
-      <label htmlFor="hashedPassword">Mot de passe</label>
-
-      <input
-        name="password"
-        type="password"
-        onChange={formik.handleChange}
-        value={formik.values.password}
-      />
-
-      <Button type="submit" variant="contained" size="large">
-        <Typography variant="button" fontSize={24}>
-          Valider{" "}
+      <Box
+        style={boxStyle}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Typography variant="h5" style={typographyStyle}>
+          Création profile utilisateur
         </Typography>
-      </Button>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <TextField
+            id="outlined-basic"
+            label="Nom"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.lastname}
+          />
+        </Box>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <TextField
+            id="outlined-basic"
+            label="Prénom"
+            name="firstname"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.firstname}
+          />
+        </Box>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <TextField
+            id="outlined-basic"
+            label="Mot de passe"
+            type="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+          />
+        </Box>
+        <Button type="submit" variant="contained" style={buttonStyle}>
+          <Typography variant="button">Créer </Typography>
+        </Button>
+      </Box>
     </form>
   );
 }
