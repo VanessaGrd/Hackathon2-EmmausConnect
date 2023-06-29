@@ -1,6 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
@@ -28,16 +26,14 @@ function App() {
           <Route path="faq" element={<Faq />} />
         </Route>
 
-
         {/* </Route><Route element={<RequireAuth allowedRoles="admin" />}> */}
         <Route path="/admin/" element={<Admin />}>
           <Route index element={<AdminHome />} />
           <Route path="telephone-list" element={<TelephoneList />} />
           <Route path="create-user" element={<CreateUser />} />
-
         </Route>
       </Routes>
-      <ToastContainer />
+     
     </div>
   );
 }

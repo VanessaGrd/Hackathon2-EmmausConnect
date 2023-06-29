@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -7,12 +10,18 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import styles from "./ExistingSmartphone.module.css";
 import filterSmartphone from "../AlgoSmartphone";
+import ModalWrapper from "../../../ModalWrapper/ModalWrapper";
+import ResumeModal from "../ResumeModal/ResumeModal";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function ExistingSmartphone() {
+  const [openModal, setOpenModal] = useState(false);
+  const notifySuccess = (text) => toast.success(text);
+  const notifyFail = () => toast.error("Un problème est survenu");
   const [smartphones, setSmartphones] = useState({
     marque: "",
     model: "",
-    OS: "",
+    os: "",
     version: "",
     ram: "",
     stockage: "",
@@ -24,18 +33,7 @@ export default function ExistingSmartphone() {
     categorie: "",
   });
 
-  // const thesmartphones = {
-  //   OS: "IOS",
-  //   version: 12,
-  //   ram: 6,
-  //   stockage: 64,
-  //   date: "2021",
-  //   olderness: 2,
-  //   reseau: "4G",
-  //   accessories: 1,
-  //   state: 3,
-  //   categorie: "",
-  // };
+ 
 
   smartphones.olderness =
     new Date().getFullYear() - parseInt(smartphones.date, 10);
@@ -46,8 +44,24 @@ export default function ExistingSmartphone() {
 
   const handleValid = () => {
     filterSmartphone(smartphones);
+    setOpenModal(true);
+
   };
   console.info(smartphones);
+
+  const handleValidate = () => {
+    axios
+      .post(`${BACKEND_URL}/submit-phone`, smartphones)
+      .then((res) => {
+        if (res.status === 200) {
+          notifySuccess("Le télephone à été ajouté");
+        } else {
+          notifyFail();
+        }
+      })
+      .catch((err) => console.error(err));
+    setOpenModal(false);
+  };
   return (
     <div className={styles.testsmartphone_container}>
       <Box sx={{ minWidth: 220 }}>
@@ -56,8 +70,8 @@ export default function ExistingSmartphone() {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            name="OS"
-            label="État"
+            name="os"
+            label="os"
             onChange={handleChangeValue}
           >
             <MenuItem value={undefined}>Please Select</MenuItem>
@@ -225,6 +239,23 @@ export default function ExistingSmartphone() {
       >
         Envoyer
       </Button>
+      {openModal && (
+        <ModalWrapper closeModal={setOpenModal} isCloseBtn>
+          <ResumeModal resume={smartphones} actionBtn={handleValidate} />
+        </ModalWrapper>)}
+
+        <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }
