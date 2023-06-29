@@ -33,7 +33,6 @@ function App() {
           <Route path="create-user" element={<CreateUser />} />
         </Route>
       </Routes>
-     
     </div>
   );
 }

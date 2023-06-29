@@ -92,7 +92,6 @@ export default function InscriptionForm() {
             id="outlined-basic"
             label="Mot de passe"
             name="password"
-
             type="password"
             onChange={formik.handleChange}
             value={formik.values.password}

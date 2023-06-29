@@ -12,6 +12,7 @@ import styles from "./ExistingSmartphone.module.css";
 import filterSmartphone from "../AlgoSmartphone";
 import ModalWrapper from "../../../ModalWrapper/ModalWrapper";
 import ResumeModal from "../ResumeModal/ResumeModal";
+
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function ExistingSmartphone() {
@@ -33,8 +34,6 @@ export default function ExistingSmartphone() {
     categorie: "",
   });
 
- 
-
   smartphones.olderness =
     new Date().getFullYear() - parseInt(smartphones.date, 10);
 
@@ -45,7 +44,6 @@ export default function ExistingSmartphone() {
   const handleValid = () => {
     filterSmartphone(smartphones);
     setOpenModal(true);
-
   };
   console.info(smartphones);
 
@@ -242,9 +240,10 @@ export default function ExistingSmartphone() {
       {openModal && (
         <ModalWrapper closeModal={setOpenModal} isCloseBtn>
           <ResumeModal resume={smartphones} actionBtn={handleValidate} />
-        </ModalWrapper>)}
+        </ModalWrapper>
+      )}
 
-        <ToastContainer
+      <ToastContainer
         position="bottom-right"
         autoClose={4000}
         hideProgressBar={false}
