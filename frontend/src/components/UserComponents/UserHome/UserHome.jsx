@@ -6,7 +6,7 @@ export default function UserHome() {
   return (
     <div className={styles.userhome_container}>
       <h1>UserHome</h1>
-      <Link to="smartphone">
+      <Link to="/user/smartphone">
         <Button type="button" variant="contained">
           User
         </Button>

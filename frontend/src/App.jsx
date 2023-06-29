@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-
+import TestNewSmartphone from "./components/UserComponents/TestNewSmartphone/TestNewSmartphone";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
@@ -20,11 +20,11 @@ function App() {
 
         <Route element={<RequireAuth allowedRoles="user" />}>
           <Route path="user/home" element={<Home />} />
+          <Route path="user/smartphone" element={<TestNewSmartphone />} />
         </Route>
 
         {/* <Route path="/home/" element={<Home />}>
           <Route index element={<UserHome />} />
-          <Route path="smartphone" element={<TestNewSmartphone />} />
         </Route>
         <Route path="/admin" element={<Admin />}>
           <Route index element={<AdminHome />} />
