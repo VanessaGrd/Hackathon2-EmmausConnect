@@ -18,7 +18,6 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Login />} />
-
         {/* <Route element={<RequireAuth allowedRoles="user" />}> */}
         <Route path="user/" element={<Home />}>
           <Route index element={<UserHome />} />
