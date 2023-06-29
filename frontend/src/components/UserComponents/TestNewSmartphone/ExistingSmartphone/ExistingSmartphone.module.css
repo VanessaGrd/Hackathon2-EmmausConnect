@@ -1,17 +1,15 @@
 .testsmartphone_container {
-    
-    height: fit-content;
-    margin-top: 20px;
-    padding: 20px 0;
-    border: solid rgb(41, 41, 41) 4px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .testsmartphone_container * {
-    margin: 3px 0;
-  }
-  
+  height: fit-content;
+  margin-top: 20px;
+  padding: 20px 0;
+  border: solid rgb(41, 41, 41) 4px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testsmartphone_container * {
+  margin: 3px 0;
+}
