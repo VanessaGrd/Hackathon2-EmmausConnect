@@ -75,6 +75,8 @@ const globalFilter = (smartphone) => {
     const reduction = totalPoints * coefficientState;
     const priceWithReduction = totalPoints - reduction;
 
+    smartphone.price = priceWithReduction;
+
     const filterByCategory = () => {
       if (totalPoints < 90) {
         smartphone.categorie = "1HC";

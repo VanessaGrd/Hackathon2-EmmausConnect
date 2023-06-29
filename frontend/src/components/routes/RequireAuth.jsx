@@ -1,9 +1,9 @@
 import React from "react";
-import { Outlet, useLocation, Navigate } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useUserContext } from "../../contexts/userContext";
-import AdminNavBar from "../AdminComponents/AdminNavBar/AdminNavBar";
-import UserHome from "../UserComponents/UserHome/UserHome";
+import Admin from "../AdminComponents/AdminNavBar/AdminNavBar";
+import Home from "../UserComponents/UserHome/UserHome";
 
 export default function RequireAuth({ allowedRoles }) {
   const { user } = useUserContext();
@@ -12,17 +12,15 @@ export default function RequireAuth({ allowedRoles }) {
   function verifyUserRole() {
     if (user?.roles === "admin") {
       return (
-        <>
-          <AdminNavBar />
-          <Outlet />
-        </>
+        <div>
+          <Admin />
+        </div>
       );
     }
     return (
-      <>
-        <UserHome />
-        <Outlet />
-      </>
+      <div>
+        <Home />
+      </div>
     );
   }
 

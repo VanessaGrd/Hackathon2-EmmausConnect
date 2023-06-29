@@ -1,0 +1,45 @@
+.resumemodal_container {
+    width: 80vw;
+    height: fit-content;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.resume_modal_box {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.one_lign {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+.data_text {
+    color: rgb(157, 0, 255);
+}
+
+.price {
+    color: rgb(216, 20, 216);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 500px) {
+    .one_lign p {
+       font-size: 1rem;
+    }
+}
