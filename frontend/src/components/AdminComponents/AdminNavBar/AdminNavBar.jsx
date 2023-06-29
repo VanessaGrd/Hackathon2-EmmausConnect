@@ -58,7 +58,7 @@ export default function AdminNavBar() {
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/admin/">
+      <NavLink className={styles.menu_link_style} to="create-user">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <AddOutlinedIcon sx={{ color: "white", mx: 2 }} />
