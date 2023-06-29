@@ -2,7 +2,6 @@ const models = require("../models");
 
 const getUserByNameMiddleware = (req, res, next) => {
   const { lastname } = req.body;
-
   models.user
     .findByNameWithPassword(lastname)
     .then(([users]) => {

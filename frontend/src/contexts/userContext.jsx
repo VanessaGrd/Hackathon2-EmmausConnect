@@ -19,7 +19,7 @@ export function UserContextProvider({ children }) {
 
   const logout = async () => {
     try {
-      await APIService.get(`/logout`);
+      await APIService.get("/logout");
       setUser({});
       localStorage.removeItem("user");
     } catch (error) {
@@ -35,6 +35,7 @@ export function UserContextProvider({ children }) {
   const memo = useMemo(() => {
     return {
       user,
+      setUser,
       logout,
       login,
     };
@@ -44,7 +45,7 @@ export function UserContextProvider({ children }) {
 }
 
 UserContextProvider.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.shape().isRequired,
 };
 
 export const useUserContext = () => useContext(UserContext);
