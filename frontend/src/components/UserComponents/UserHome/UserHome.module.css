@@ -1,0 +1,10 @@
+.userhome_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userhome_container * {
+  margin: 20px 0;
+}
