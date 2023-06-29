@@ -12,18 +12,31 @@ import filterSmartphone from "./AlgoSmartphone";
 export default function TestSmartphone() {
   const [smartphones, setSmartphones] = useState({
     marque: "",
-    model: 0,
-    version: "",
+    model: "",
     OS: "",
-    ram: 0,
-    stockage: 0,
+    version: "",
+    ram: "",
+    stockage: "",
     date: "",
     olderness: "",
     reseau: "",
-    accessories: 0,
-    state: 0,
+    accessories: "",
+    state: "",
     categorie: "",
   });
+
+  // const thesmartphones = {
+  //   OS: "IOS",
+  //   version: 12,
+  //   ram: 6,
+  //   stockage: 64,
+  //   date: "2021",
+  //   olderness: 2,
+  //   reseau: "4G",
+  //   accessories: 1,
+  //   state: 3,
+  //   categorie: "",
+  // };
 
   smartphones.olderness =
     new Date().getFullYear() - parseInt(smartphones.date, 10);
@@ -31,19 +44,6 @@ export default function TestSmartphone() {
   const handleChangeValue = (e) => {
     setSmartphones({ ...smartphones, [e.target.name]: e.target.value });
   };
-
-  //   const smartphones = {
-  //     version: "IOS",
-  //     model: 10,
-  //     RAM: "6",
-  //     stockage: 64,
-  //     date: "2021",
-  //     olderness: "",
-  //     reseau: "4G",
-  //     accessories: true,
-  //     state: 3,
-  //     categorie: "",
-  //   };
 
   const handleValid = () => {
     filterSmartphone(smartphones);

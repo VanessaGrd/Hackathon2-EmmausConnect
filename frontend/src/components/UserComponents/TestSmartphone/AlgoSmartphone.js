@@ -1,36 +1,32 @@
 /* eslint-disable no-param-reassign */
 const globalFilter = (smartphone) => {
   const filterSmartphones = () => {
-    if (smartphone.OS === "android") {
-      if (
-        parseInt(smartphone.version, 10) >= 8 &&
-        parseInt(smartphone.ram, 10) >= 2 &&
-        parseInt(smartphone.stockage, 10) >= 16 &&
-        smartphone.reseau >= "4G" &&
-        smartphone.accessories === 1 &&
-        parseInt(smartphone.olderness, 10) <= 3
-      ) {
-        console.info("telephone android valide");
-        return true;
-      }
+    if (
+      smartphone.OS === "android" &&
+      parseInt(smartphone.version, 10) >= 8 &&
+      parseInt(smartphone.ram, 10) >= 2 &&
+      parseInt(smartphone.stockage, 10) >= 16 &&
+      smartphone.reseau >= "4G" &&
+      parseInt(smartphone.accessories, 10) === 1 &&
+      parseInt(smartphone.olderness, 10) <= 3
+    ) {
+      console.info("telephone android valide");
+      return true;
     }
-    if (smartphone.OS === "IOS") {
-      if (
-        parseInt(smartphone.version, 10) >= 10 &&
-        parseInt(smartphone.ram, 10) >= 2 &&
-        parseInt(smartphone.stockage, 10) >= 64 &&
-        smartphone.reseau >= "4G" &&
-        smartphone.accessories === 1 &&
-        parseInt(smartphone.olderness, 10) <= 3
-      ) {
-        console.info("telephone IOS valide");
-        return true;
-      }
-    } else {
-      console.info("le telephone ne remplit pas les conditions");
-      return null;
+    if (
+      smartphone.OS === "IOS" &&
+      parseInt(smartphone.version, 10) >= 10 &&
+      parseInt(smartphone.ram, 10) >= 2 &&
+      parseInt(smartphone.stockage, 10) >= 64 &&
+      smartphone.reseau >= "4G" &&
+      parseInt(smartphone.accessories, 10) === 1 &&
+      parseInt(smartphone.olderness, 10) <= 3
+    ) {
+      console.info("telephone IOS valide");
+      return true;
     }
-    return null;
+    console.error("le telephone ne remplit pas les conditions");
+    return false;
   };
 
   if (filterSmartphones(smartphone)) {
