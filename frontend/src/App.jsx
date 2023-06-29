@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import TestNewSmartphone from "./components/UserComponents/TestNewSmartphone/TestNewSmartphone";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import RequireAuth from "./components/routes/RequireAuth";
@@ -30,6 +32,7 @@ function App() {
           <Route index element={<AdminHome />} />
         </Route> */}
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

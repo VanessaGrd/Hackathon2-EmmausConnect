@@ -25,6 +25,6 @@ router.get("/api/logout", verifyToken, logout);
 // Private Routes
 const userControllers = require("./controllers/userControllers");
 
-router.post("/api/users", hashPassword, userControllers.add);
+router.post("/users", hashPassword, userControllers.add);
 
 module.exports = router;
