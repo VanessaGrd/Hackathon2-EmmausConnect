@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Button from "@mui/material/Button";
-// import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 import styles from "./Login.module.css";
 import { useUserContext } from "../../contexts/userContext";
 import APIService from "../../services/APIService";
@@ -46,27 +46,26 @@ export default function Login() {
       <div className={styles.login_box}>
         <form action="login" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email">Nom</label>
-            <input
+            <TextField
               type="lastname"
               name="lastname"
               id="lastname"
-              required="required"
-              placeholder="votre nom"
+              label="Votre nom"
               onChange={handleChange}
             />
           </div>
           <div>
-            <label htmlFor="password">Mot de passe</label>
-            <input
+            <TextField
               type="password"
               name="password"
               id="password"
-              required="required"
-              placeholder="........"
+              label="Password"
               onChange={handleChange}
             />
-            <button type="submit">Connexion</button>
+            <Button variant="contained" type="submit">
+              Connexion
+            </Button>
+            <p>{error}</p>
           </div>
         </form>
 

@@ -8,8 +8,11 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import styles from "./TestSmartphone.module.css";
 import filterSmartphone from "../AlgoSmartphone";
+import ModalWrapper from "../../../ModalWrapper/ModalWrapper";
+import ResumeModal from "../ResumeModal/ResumeModal";
 
 export default function TestSmartphone() {
+  const [openModal, setOpenModal] = useState(false);
   const [smartphones, setSmartphones] = useState({
     marque: "",
     model: "",
@@ -23,20 +26,8 @@ export default function TestSmartphone() {
     accessories: "",
     state: "",
     categorie: "",
+    price: "",
   });
-
-  // const thesmartphones = {
-  //   OS: "IOS",
-  //   version: 12,
-  //   ram: 6,
-  //   stockage: 64,
-  //   date: "2021",
-  //   olderness: 2,
-  //   reseau: "4G",
-  //   accessories: 1,
-  //   state: 3,
-  //   categorie: "",
-  // };
 
   smartphones.olderness =
     new Date().getFullYear() - parseInt(smartphones.date, 10);
@@ -47,8 +38,10 @@ export default function TestSmartphone() {
 
   const handleValid = () => {
     filterSmartphone(smartphones);
+    setOpenModal(true);
   };
   console.info(smartphones);
+
   return (
     <div className={styles.testsmartphone_container}>
       <TextField
@@ -151,6 +144,11 @@ export default function TestSmartphone() {
       >
         Envoyer
       </Button>
+      {openModal && (
+        <ModalWrapper closeModal={setOpenModal} isCloseBtn>
+          <ResumeModal resume={smartphones} />
+        </ModalWrapper>
+      )}
     </div>
   );
 }

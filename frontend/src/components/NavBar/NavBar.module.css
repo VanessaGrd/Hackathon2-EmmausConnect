@@ -9,3 +9,21 @@
   position: fixed;
   z-index: 10;
 }
+
+.menu_link_style {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav_title {
+  color: white;
+}
+
+.user_logo{
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}

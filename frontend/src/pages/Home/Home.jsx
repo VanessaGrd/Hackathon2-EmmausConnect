@@ -1,11 +1,14 @@
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import NavBar from "../../components/NavBar/NavBar";
 import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.home_page}>
-      {/* <Outlet /> */}
-      Home page
+    <div>
+      <NavBar />
+      <div className={styles.home_page}>
+        <Outlet />
+      </div>
     </div>
   );
 }
