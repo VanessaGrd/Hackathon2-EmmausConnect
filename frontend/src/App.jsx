@@ -11,6 +11,7 @@ import "./App.css";
 // import RequireAuth from "./components/routes/RequireAuth";
 import Home from "./pages/Home/Home";
 import CreateUser from "./components/AdminComponents/CreateUser";
+import Faq from "./components/UserComponents/AdminHome/Faq";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="user/home/" element={<Home />}>
           <Route index element={<UserHome />} />
           <Route path="smartphone" element={<TestNewSmartphone />} />
+          <Route path="faq" element={<Faq />} />
         </Route>
 
         {/* </Route><Route element={<RequireAuth allowedRoles="admin" />}> */}

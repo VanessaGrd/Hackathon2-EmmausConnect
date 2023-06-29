@@ -55,11 +55,12 @@ export default function NavBar() {
           <ListItemIcon>
             <SmartphoneOutlinedIcon sx={{ color: "white", mx: 2 }} />
           </ListItemIcon>
+
           <h5 className={styles.nav_title}>Évaluer un téléphone</h5>
         </CustomListItemButton>
       </NavLink>
       <Divider orientation="vertical" sx={{ backgroundColor: "white" }} />
-      <NavLink className={styles.menu_link_style} to="/user/home">
+      <NavLink className={styles.menu_link_style} to="faq">
         <CustomListItemButton sx={{ borderRadius: 3, mx: 1 }}>
           <ListItemIcon>
             <QuestionMarkOutlinedIcon sx={{ color: "white", mx: 2 }} />
