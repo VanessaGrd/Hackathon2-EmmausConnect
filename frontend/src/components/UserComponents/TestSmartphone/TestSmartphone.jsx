@@ -20,10 +20,13 @@ export default function TestSmartphone() {
     date: "",
     olderness: "",
     reseau: "",
-    accessories: "",
-    state: "",
+    accessories: 0,
+    state: 0,
     categorie: "",
   });
+
+  smartphones.olderness =
+    new Date().getFullYear() - parseInt(smartphones.date, 10);
 
   const handleChangeValue = (e) => {
     setSmartphones({ ...smartphones, [e.target.name]: e.target.value });
@@ -116,8 +119,9 @@ export default function TestSmartphone() {
             label="État"
             onChange={handleChangeValue}
           >
-            <MenuItem value={false}>Non</MenuItem>
-            <MenuItem value>Oui</MenuItem>
+            <MenuItem value={undefined}>Please Select</MenuItem>
+            <MenuItem value={0}>Non</MenuItem>
+            <MenuItem value={1}>Oui</MenuItem>
           </Select>
         </FormControl>
       </Box>
@@ -131,6 +135,7 @@ export default function TestSmartphone() {
             label="État"
             onChange={handleChangeValue}
           >
+            <MenuItem value={undefined}>Please Select</MenuItem>
             <MenuItem value={0}>DEEE</MenuItem>
             <MenuItem value={1}>Réparable</MenuItem>
             <MenuItem value={2}>Bloqué</MenuItem>

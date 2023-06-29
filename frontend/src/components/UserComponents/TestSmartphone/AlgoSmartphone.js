@@ -1,7 +1,5 @@
+/* eslint-disable no-param-reassign */
 const globalFilter = (smartphone) => {
-  const getOlderness = new Date().getFullYear() - parseInt(smartphone.date, 10);
-  smartphone.olderness = getOlderness;
-
   const filterSmartphones = () => {
     if (smartphone.OS === "android") {
       if (
@@ -9,8 +7,8 @@ const globalFilter = (smartphone) => {
         parseInt(smartphone.ram, 10) >= 2 &&
         parseInt(smartphone.stockage, 10) >= 16 &&
         smartphone.reseau >= "4G" &&
-        smartphone.accessories === true &&
-        smartphone.olderness <= 3
+        smartphone.accessories === 1 &&
+        parseInt(smartphone.olderness, 10) <= 3
       ) {
         console.info("telephone android valide");
         return true;
@@ -22,8 +20,8 @@ const globalFilter = (smartphone) => {
         parseInt(smartphone.ram, 10) >= 2 &&
         parseInt(smartphone.stockage, 10) >= 64 &&
         smartphone.reseau >= "4G" &&
-        smartphone.accessories === true &&
-        smartphone.olderness <= 3
+        smartphone.accessories === 1 &&
+        parseInt(smartphone.olderness, 10) <= 3
       ) {
         console.info("telephone IOS valide");
         return true;
@@ -81,7 +79,7 @@ const globalFilter = (smartphone) => {
     const reduction = totalPoints * coefficientState;
     const priceWithReduction = totalPoints - reduction;
 
-    const filterByCategory = (totalPoints) => {
+    const filterByCategory = () => {
       if (totalPoints < 90) {
         smartphone.categorie = "1HC";
         return;
@@ -100,7 +98,6 @@ const globalFilter = (smartphone) => {
       }
       if (totalPoints > 375) {
         smartphone.categorie = "5P";
-        return;
       }
     };
 
