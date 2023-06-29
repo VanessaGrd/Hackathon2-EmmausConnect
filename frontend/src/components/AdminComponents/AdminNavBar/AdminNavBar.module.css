@@ -1,11 +1,29 @@
 .admin_navbar_container {
   width: 100vw;
   height: 60px;
-  background-color: aqua;
+  background-color: rgb(158, 68, 68);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 5px 0 rgba(35, 35, 35, 0.75);
   position: fixed;
   z-index: 10;
+}
+
+.menu_link_style {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav_title {
+  color: white;
+}
+
+.user_logo{
+  position: fixed;
+  top: 5px;
+  right: 5px;
 }

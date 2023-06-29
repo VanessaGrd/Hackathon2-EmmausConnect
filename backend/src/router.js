@@ -19,12 +19,12 @@ const {
 } = require("./services/auth");
 
 // public routes (Auth)
-router.post("/api/login", getUserByNameMiddleware, verifyPassword);
-router.get("/api/logout", verifyToken, logout);
+router.post("/login", getUserByNameMiddleware, verifyPassword);
+router.get("/logout", verifyToken, logout);
 
 // Private Routes
 const userControllers = require("./controllers/userControllers");
 
-router.post("/api/users", hashPassword, userControllers.add);
+router.post("/users", hashPassword, userControllers.add);
 
 module.exports = router;
