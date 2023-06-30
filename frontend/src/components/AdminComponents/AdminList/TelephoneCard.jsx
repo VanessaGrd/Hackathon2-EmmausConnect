@@ -51,7 +51,7 @@ export default function TelephoneCard({ smartphone }) {
           Accessoire: <span>{smartphone.accessorie}</span>
         </p>
         <p>
-          Catégoire: <span>{smartphone.category}</span>
+          Catégorie: <span>{smartphone.category}</span>
         </p>
         <p>
           Prix: <span className={styles.price_final}>{smartphone.price} €</span>

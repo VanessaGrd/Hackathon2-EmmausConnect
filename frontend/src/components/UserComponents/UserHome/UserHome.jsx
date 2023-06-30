@@ -12,7 +12,7 @@ export default function UserHome() {
           </div>
         </div>
       </Link>
-      <Link to="smartphone">
+      <Link to="faq">
         <div className={styles.home_box2}>
           <div className={styles.overlay}>
             <Button variant="contained">Voir la FAQ</Button>
