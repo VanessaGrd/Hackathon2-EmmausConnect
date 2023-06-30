@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { Typography, Button, Box, TextField } from "@mui/material";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import APIService from "../../services/APIService";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -60,6 +60,7 @@ export default function InscriptionForm() {
         >
           <TextField
             id="outlined-basic"
+            name="lastname"
             label="Nom"
             type="text"
             onChange={formik.handleChange}
@@ -90,6 +91,7 @@ export default function InscriptionForm() {
           <TextField
             id="outlined-basic"
             label="Mot de passe"
+            name="password"
             type="password"
             onChange={formik.handleChange}
             value={formik.values.password}
@@ -99,6 +101,7 @@ export default function InscriptionForm() {
           <Typography variant="button">Créer </Typography>
         </Button>
       </Box>
+      <ToastContainer />
     </form>
   );
 }
