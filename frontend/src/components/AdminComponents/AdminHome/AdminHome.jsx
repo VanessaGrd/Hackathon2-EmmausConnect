@@ -17,7 +17,7 @@ export default function AdminHome() {
           </div>
         </div>
       </Link>
-      <Link to="telephone-list">
+      <Link to="create-user">
         <div className={styles.admin_box2}>
           <div className={styles.overlay}>
             <Button
