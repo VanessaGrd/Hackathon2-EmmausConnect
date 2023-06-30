@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import styles from "./Login.module.css";
 import { useUserContext } from "../../contexts/userContext";
 import APIService from "../../services/APIService";
+import logoEmmaus from "../../assets/logoemmaus.png";
+import bgEc from "../../assets/bglogin.png";
 
 export default function Login() {
   const { login } = useUserContext();
@@ -40,35 +42,43 @@ export default function Login() {
       [e.target.name]: e.target.value,
     });
   };
-
+  const buttonStyle = {
+    backgroundColor: "rgb(39, 35, 80)",
+  };
   return (
     <div className={styles.login_page}>
-      <div className={styles.login_box}>
-        <form action="login" onSubmit={handleSubmit}>
-          <div>
-            <TextField
-              type="lastname"
-              name="lastname"
-              id="lastname"
-              label="Votre nom"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <TextField
-              type="password"
-              name="password"
-              id="password"
-              label="Password"
-              onChange={handleChange}
-            />
-            <Button variant="contained" type="submit">
-              Connexion
-            </Button>
-            <p>{error}</p>
-          </div>
-        </form>
+      <img className={styles.imgbg} src={bgEc} alt="bgEc" />
 
+      <div className={styles.titleandformContainer}>
+        <img className={styles.logo} src={logoEmmaus} alt="logoEmmaus" />
+
+        <div className={styles.login_box}>
+          <h3>Veuillez rentrer vos identifiants</h3>
+          <form action="login" onSubmit={handleSubmit}>
+            <div>
+              <TextField
+                type="lastname"
+                name="lastname"
+                id="lastname"
+                label="Votre nom"
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <TextField
+                type="password"
+                name="password"
+                id="password"
+                label="Password"
+                onChange={handleChange}
+              />
+              <Button variant="contained" type="submit" style={buttonStyle}>
+                Connexion
+              </Button>
+              <p>{error}</p>
+            </div>
+          </form>
+        </div>
         {/* <TextField
           id="outlined-basic"
           label="Nom d'utilisateur"
