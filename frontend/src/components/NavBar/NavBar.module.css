@@ -26,3 +26,40 @@
   top: 5px;
   right: 5px;
 }
+
+
+.menu_burger_box {
+  height: 55px;
+  width: 120px;
+  position: fixed;
+  border-radius: 40px;
+  background-color: white;
+  top: 2.5px;
+  left: 10px;
+}
+
+.img_logo {
+  height: 60px;
+  width: 100px;
+}
+
+.menu_big {
+  display: flex;
+}
+
+.burger_menu_div {
+ display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .menu_big {
+    display: none;
+  }
+
+  .burger_menu_div {
+    display: block;
+    position: fixed;
+    top: 5px;
+    right: 60px;
+  }
+}
