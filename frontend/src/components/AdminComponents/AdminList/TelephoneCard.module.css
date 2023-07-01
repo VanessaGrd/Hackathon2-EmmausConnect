@@ -74,7 +74,6 @@
   .img_section {
     height: 15%;
     width: 100%;
-    background-color: rgb(152, 241, 241);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,21 +87,18 @@
   .brand_section {
     height: 30%;
     width: 100%;
-    background-color: rgb(174, 240, 145);
     display: flex;
     flex-wrap: wrap;
   }
   .model_section {
     height: 30%;
     width: 100%;
-    background-color: rgb(186, 110, 231);
     display: flex;
     flex-wrap: wrap;
   }
   .price_section {
     height: 25%;
     width: 100%;
-    background-color: rgb(238, 167, 131);
     display: flex;
     justify-content: center;
     align-items: center;
