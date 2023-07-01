@@ -10,6 +10,7 @@
 
 .resume_modal_box {
   margin-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,13 +28,16 @@
 }
 
 .data_text {
-  color: rgb(157, 0, 255);
+  color: rgb(34, 0, 255);
 }
 
 .price {
-  color: rgb(216, 20, 216);
   font-size: 1.5rem;
   font-weight: 600;
+  border: solid rgb(46, 46, 46) 1px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: rgb(225, 225, 225);
 }
 
 @media screen and (max-width: 500px) {

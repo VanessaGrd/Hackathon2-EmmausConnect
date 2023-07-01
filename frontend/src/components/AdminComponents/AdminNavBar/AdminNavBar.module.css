@@ -27,7 +27,6 @@
   right: 5px;
 }
 
-
 .menu_burger_box {
   height: 55px;
   width: 120px;
@@ -48,7 +47,7 @@
 }
 
 .burger_menu_div {
- display: none;
+  display: none;
 }
 
 @media screen and (max-width: 700px) {

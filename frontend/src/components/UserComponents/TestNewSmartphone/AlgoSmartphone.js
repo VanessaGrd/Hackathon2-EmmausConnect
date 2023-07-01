@@ -31,32 +31,32 @@ const globalFilter = (smartphone) => {
 
   if (filterSmartphones(smartphone)) {
     const sumOfPointsDate = {
-      5: 24,
-      4: 32,
-      3: 40,
-      2: 48,
-      1: 56,
-      0: 64,
+      5: 6,
+      4: 10,
+      3: 14,
+      2: 18,
+      1: 22,
+      0: 30,
     };
     const sumOfPointsMem = {
-      1: 30,
-      2: 44,
-      3: 54,
-      4: 65,
-      6: 80,
-      8: 92,
-      12: 108,
-      16: 126,
+      1: 8,
+      2: 12,
+      3: 16,
+      4: 20,
+      6: 24,
+      8: 30,
+      12: 36,
+      16: 42,
     };
 
     const sumOfPointsStockage = {
-      16: 31,
-      32: 45,
-      64: 66,
-      128: 75,
-      256: 89,
-      512: 97,
-      1000: 106,
+      16: 10,
+      32: 12,
+      64: 16,
+      128: 20,
+      256: 24,
+      512: 30,
+      1000: 36,
     };
 
     const sumOfPointsState = {

@@ -84,7 +84,9 @@ export default function Faq() {
     setText("");
     toast.success("Votre question a été envoyée avec succès !");
   };
-
+  const handleText = (e) => {
+    setText(e.target.value);
+  };
   return (
     <div>
       <h1>FAQ</h1>
@@ -130,7 +132,9 @@ export default function Faq() {
             type="text"
             sx={{ width: 250, marginBottom: 3 }}
             value={text}
+            onChange={handleText}
           />
+
           <Button type="button" variant="contained" onClick={handleMessage}>
             <Typography variant="button">Envoyer </Typography>
           </Button>

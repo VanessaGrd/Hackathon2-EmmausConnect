@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 12;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +32,6 @@
   text-align: center;
   box-shadow: 6px 3px 3px rgb(93, 88, 88);
   z-index: 25;
-  
 }
 
 .login_box * {
