@@ -134,6 +134,7 @@ export default function Faq() {
             value={text}
             onChange={handleText}
           />
+
           <Button type="button" variant="contained" onClick={handleMessage}>
             <Typography variant="button">Envoyer </Typography>
           </Button>
