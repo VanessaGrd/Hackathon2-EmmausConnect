@@ -1,6 +1,7 @@
 .login_page {
   width: 100vw;
   height: 100vh;
+  position: absolute;
   z-index: 12;
   position: fixed;
   display: flex;
@@ -52,9 +53,10 @@ h3 {
   width: 800px;
   height: 800px;
   position: fixed;
+  top: 200;
   left: 0;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .logo {
   z-index: 20;

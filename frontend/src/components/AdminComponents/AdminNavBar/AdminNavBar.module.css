@@ -32,11 +32,10 @@
   width: 120px;
   position: fixed;
   border-radius: 40px;
-  background-color: white;
+  background-color: rgb(207, 207, 207);
   top: 2.5px;
   left: 10px;
 }
-
 .img_logo {
   height: 60px;
   width: 100px;

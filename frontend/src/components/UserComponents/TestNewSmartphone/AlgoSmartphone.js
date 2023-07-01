@@ -66,7 +66,6 @@ const globalFilter = (smartphone) => {
       3: 0.05,
       4: 0,
     };
-
     const pointsDate = sumOfPointsDate[smartphone.olderness];
     const pointsMem = sumOfPointsMem[smartphone.ram];
     const pointsStock = sumOfPointsStockage[smartphone.stockage];
